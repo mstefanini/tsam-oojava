@@ -49,4 +49,5 @@ public class Esercizio {
 		}
 		return result/a.length;
 	}
+
 }

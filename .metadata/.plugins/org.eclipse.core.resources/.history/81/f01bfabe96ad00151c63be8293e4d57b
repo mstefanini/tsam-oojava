@@ -1,0 +1,10 @@
+
+public class Statistics{
+	static int studentsAverageMarks(Student[] students){
+		float tot = 0;
+		for(Student x: students){
+			tot += x.marksAverage();
+		}
+		return Math.round(tot/students.length);
+	}
+}

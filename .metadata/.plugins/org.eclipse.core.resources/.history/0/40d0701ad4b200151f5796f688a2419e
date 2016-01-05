@@ -1,0 +1,9 @@
+
+public class Salute {
+	Persona persona;
+
+	Salute(Persona x){
+		this.persona = x;
+		System.out.println(this.BMR);
+	}
+}
