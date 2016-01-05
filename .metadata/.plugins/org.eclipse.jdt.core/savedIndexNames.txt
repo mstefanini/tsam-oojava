@@ -1,7 +1,0 @@
-INDEX VERSION 1.127+/home/matteo/Documents/OOJAVA/repository/tsam-oojava/.metadata/.plugins/org.eclipse.jdt.core
-2453084859.index
-519723580.index
-1778215594.index
-3824269112.index
-2280852358.index
-357054388.index

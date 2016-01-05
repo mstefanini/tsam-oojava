@@ -1,7 +1,0 @@
-
-public class Azienda {
-	Dipendete[] listDipendenti;
-	String ragionesocile;
-	
-	
-}
