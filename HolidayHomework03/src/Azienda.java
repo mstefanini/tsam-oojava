@@ -1,11 +1,11 @@
 
 public class Azienda {
-	Dipendete[] listaDipendenti;
+	Dipendente[] listaDipendenti;
 	String ragionesociale;
 	
 	float sommaStipendi(){
 		float ris = 0;
-		for(Dipendete dip: listaDipendenti){
+		for(Dipendente dip: listaDipendenti){
 			ris += dip.contratto.get() + 0.5 * dip.anzianita;
 		}
 		return ris;
