@@ -9,7 +9,7 @@ public class Bluray extends Supporto {
 	
 	
 	public int calcoloCostoSupporto(){
-		int costo = 0;
+		int costo = 1;
 		for(int i = 0; i <= getGiorni(); i++){
 			costo += costo + (int)(costo * 0.10);
 		}
