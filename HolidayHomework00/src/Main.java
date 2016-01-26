@@ -3,10 +3,12 @@ import java.util.Scanner;
 
 public class Main {
 	
+	private static Scanner s;
+
 	public static void main(String[] args){
 		int[] list = new int[9];
 
-	    Scanner s = new Scanner(System.in);
+	    s = new Scanner(System.in);
 	    int intNum = s.nextInt();
 	    
         while(intNum >= 500){
