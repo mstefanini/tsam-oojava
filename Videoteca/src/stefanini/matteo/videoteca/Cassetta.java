@@ -6,6 +6,11 @@ public class Cassetta extends Supporto {
 		this.setPrezzoAfterOneDay(2*100);
 		this.setPrezzoOneDay(1*100);
 	}
+
+	@Override
+	public int calcoloCostoSupporto() {
+		return getPrezzoOneDay() + (getPrezzoAfterOneDay() * getGiorni());
+	}
 	
 	
 }

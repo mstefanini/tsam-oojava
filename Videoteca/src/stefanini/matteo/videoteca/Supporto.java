@@ -1,15 +1,12 @@
 package stefanini.matteo.videoteca;
 
-public class Supporto {
+public abstract class Supporto {
 
 	private int prezzoOneDay;
 	private int prezzoAfterOneDay;
 	private int giorni;
 	
-	public int calcoloCostoSupporto(){
-		return getPrezzoOneDay()
-				+ getPrezzoAfterOneDay() * (getGiorni()-1);
-	}
+	abstract public int calcoloCostoSupporto();
 	
 	public int getGiorni() {
 		return giorni;
