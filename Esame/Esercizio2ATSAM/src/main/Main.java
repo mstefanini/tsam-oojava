@@ -9,7 +9,7 @@ public class Main {
 	
 	  private static final char[] symbols;
 	  private static final char[] buf = new char[4];
-	  private static final Random random = new Random();
+	  private static final Random random = new Random(354);
 	  
 	  static {
 	    StringBuilder tmp = new StringBuilder();

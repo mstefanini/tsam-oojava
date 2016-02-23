@@ -9,6 +9,7 @@ import es1.main.Statistics;
 /**
 * NON MODIFICARE
 */
+
 public class StatisticsTest {
 
 	@Test

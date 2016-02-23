@@ -45,4 +45,17 @@ public abstract class Dipendente {
 		this.pagaBase = pagaBase;
 	}
 	
+	@Override
+	public boolean equals(Object o){
+		if( !(o instanceof Dipendente))
+			return false;
+		Dipendente d = (Dipendente)o;
+		return this.cf.equals(d.getCF());
+	}
+	
+	@Override
+	public int hashCode(){
+		return this.cf.hashCode();
+	}
+	
 }

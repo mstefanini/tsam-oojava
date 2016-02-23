@@ -1,5 +1,8 @@
 package main;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Gestisce gli stipendi dei propri dipendenti.
  *
@@ -7,6 +10,8 @@ package main;
 public class Azienda {
 
 	private String ragioneSociale;
+	
+	private Map<Dipendente, Integer> map = new HashMap<>();
 	
 	public String getRagioneSociale() {
 		return ragioneSociale;
@@ -22,7 +27,11 @@ public class Azienda {
 	 * @return il totale dello stipendi da pagare
 	 */
 	public int totaleStipendi() {
-		// TODO: da implementare
+		double total = 0;
+		for(Map.Entry<Dipendente, Integer> entry : map.entrySet()){
+			total += entry.getKey().calcolaStipendio();
+		}
+		return (int) Math.round(total);
 	}
 	
 	/**
@@ -31,7 +40,12 @@ public class Azienda {
 	 * @param d dipendente
 	 */
 	public void addDipendente(Dipendente d) {
-		// TODO: da implementare
+		if(!(map.containsKey(d)))
+				map.put(d, 1);
+		else{
+			Integer temp = map.get(d);
+			map.put(d, ++temp);
+		}
 	}
 	
 	/**
@@ -40,7 +54,12 @@ public class Azienda {
 	 * @return
 	 */
 	public int dipendentiDuplicati() {
-		// TODO: da implementare
+		int total = 0;
+		for(Map.Entry<Dipendente, Integer> entry: map.entrySet()){
+			if( entry.getValue().intValue() > 1)
+				total++;
+		}
+		return total;
 	}
 	
 	/**
@@ -52,7 +71,7 @@ public class Azienda {
 	 * @return numero di ripetizioni.
 	 */
 	public int numeroRipetizioni(Dipendente d) {
-		// TODO: da implementare
+		return map.get(d).intValue();
 	}
 
 }
